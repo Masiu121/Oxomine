@@ -13,13 +13,15 @@ public class Block {
 
     Material material;
 
-    public Block(Location location) {
+    public Block(Location location, Material material) {
         this.location = location;
         this.world = this.location.getWorld();
 
         this.x = (int) location.getX();
         this.y = (int) location.getY();
         this.z = (int) location.getZ();
+
+        this.material = material;
     }
 
     public int getX() {
@@ -40,5 +42,9 @@ public class Block {
 
     public void setType(Material material) {
         this.material = material;
+    }
+
+    public Material getMaterial() {
+        return material;
     }
 }
