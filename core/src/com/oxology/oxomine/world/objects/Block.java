@@ -11,6 +11,8 @@ public class Block {
     int y;
     int z;
 
+    Material material;
+
     public Block(Location location) {
         this.location = location;
         this.world = this.location.getWorld();
@@ -34,5 +36,9 @@ public class Block {
 
     public Location getLocation() {
         return location;
+    }
+
+    public void setType(Material material) {
+        this.material = material;
     }
 }
