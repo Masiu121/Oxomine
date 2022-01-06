@@ -2,6 +2,7 @@ package com.oxology.oxomine.world;
 
 import com.oxology.oxomine.entites.Entity;
 import com.oxology.oxomine.world.objects.Block;
+import com.oxology.oxomine.world.objects.Material;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -27,6 +28,13 @@ public class Chunk {
 
         x = (int) this.location.getX()/CHUNK_SIZE;
         y = (int) this.location.getY()/CHUNK_SIZE;
+
+        for(int x = 0; x < CHUNK_SIZE; x++) {
+            for(int y = 0; y < CHUNK_SIZE; y++) {
+                blocks.add(new Block(new Location(this.world, this.location.getX()+x, this.location.getY()+y, 0), Material.AIR));
+                blocks.add(new Block(new Location(this.world, this.location.getX()+x, this.location.getY()+y, 1), Material.AIR));
+            }
+        }
     }
 
     public Location getLocation() {
