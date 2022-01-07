@@ -44,7 +44,7 @@ public class Block {
         this.material = material;
     }
 
-    public Material getMaterial() {
+    public Material getType() {
         return material;
     }
 }
