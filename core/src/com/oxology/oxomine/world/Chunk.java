@@ -31,8 +31,8 @@ public class Chunk {
 
         for(int x = 0; x < CHUNK_SIZE; x++) {
             for(int y = 0; y < CHUNK_SIZE; y++) {
-                blocks.add(new Block(new Location(this.world, this.location.getX()+x, this.location.getY()+y, 0), Material.AIR));
-                blocks.add(new Block(new Location(this.world, this.location.getX()+x, this.location.getY()+y, 1), Material.AIR));
+                blocks.add(new Block(new Location(this.world, x, y, 0), Material.AIR));
+                blocks.add(new Block(new Location(this.world, x, y, 1), Material.AIR));
             }
         }
     }
